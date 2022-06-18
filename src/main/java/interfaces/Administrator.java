@@ -1,4 +1,4 @@
-package Interfaces;
+package interfaces;
 
 public interface Administrator extends Person{
     void overdueNotification(Reader reader);

@@ -1,8 +1,8 @@
-import Interfaces.Administrator;
-import Interfaces.Reader;
+import interfaces.Administrator;
+import interfaces.Reader;
 
 public class ClassReader extends User implements Reader {
-    public ClassReader(String name, String role) {
+    ClassReader(String name, String role) {
         super(name, role);
     }
 
@@ -18,11 +18,11 @@ public class ClassReader extends User implements Reader {
 
     @Override
     public String sayName() {
-        return name;
+        return getName();
     }
 
     @Override
     public String sayRole() {
-        return role;
+        return getRole();
     }
 }

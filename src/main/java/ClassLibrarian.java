@@ -1,10 +1,10 @@
-import Interfaces.Administrator;
-import Interfaces.Librarian;
-import Interfaces.Reader;
-import Interfaces.Supplier;
+import interfaces.Administrator;
+import interfaces.Librarian;
+import interfaces.Reader;
+import interfaces.Supplier;
 
 public class ClassLibrarian extends User implements Librarian, Administrator {
-    public ClassLibrarian(String name, String role) {
+    ClassLibrarian(String name, String role) {
         super(name, role);
     }
 
@@ -15,12 +15,12 @@ public class ClassLibrarian extends User implements Librarian, Administrator {
 
     @Override
     public String sayName() {
-        return name;
+        return getName();
     }
 
     @Override
     public String sayRole() {
-        return role;
+        return getRole();
     }
 
     @Override

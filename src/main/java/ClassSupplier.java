@@ -1,21 +1,21 @@
-import Interfaces.Administrator;
-import Interfaces.Librarian;
-import Interfaces.Reader;
-import Interfaces.Supplier;
+import interfaces.Administrator;
+import interfaces.Librarian;
+import interfaces.Reader;
+import interfaces.Supplier;
 
 public class ClassSupplier extends User implements Supplier, Reader {
-    public ClassSupplier(String name, String role) {
+    ClassSupplier(String name, String role) {
         super(name, role);
     }
 
     @Override
     public String sayName() {
-        return name;
+        return getName();
     }
 
     @Override
     public String sayRole() {
-        return role;
+        return getRole();
     }
 
     @Override

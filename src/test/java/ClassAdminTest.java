@@ -3,25 +3,19 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 public class ClassAdminTest {
-    ClassAdmin classAdmin;
-    ClassReader classReader;
-    Book book;
+    private ClassAdmin classAdmin;
 
     @BeforeEach
     public void beforeEach() {
         classAdmin = new ClassAdmin("Анджелина Джоли", "Администраторша");
-        classReader = new ClassReader("Дженнифер Энистон", "читательнице");
-        book = new Book("Как отбить мужчину за 10 минут");
     }
 
     @Test
     public void testOverdueNotification() {
-        String adminsName = classAdmin.name;
-        String readersName = classReader.name;
+        String adminsName = classAdmin.getName();
 
-        System.out.println(classAdmin.role + " " + classAdmin.name + " дала почитать " + classReader.role + " " + classReader.name + " книгу " + book.getBookName());
+        System.out.println(classAdmin.getRole().equals("Администраторша") + " " + classAdmin.getName().equals("Анджелина Джоли"));
 
         Assertions.assertNotNull(adminsName);
-        Assertions.assertNotNull(readersName);
     }
 }

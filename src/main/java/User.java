@@ -1,6 +1,13 @@
 public abstract class User {
-    String name;
-    String role;
+    private String name;
+    private String role;
+
+    public String getName() {
+        return name;
+    }
+    public String getRole() {
+        return role;
+    }
 
     public User(String name, String role) {
         this.name = name;
